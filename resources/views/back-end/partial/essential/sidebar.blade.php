@@ -60,7 +60,7 @@
                     <img src="{{ asset('back-end') }}/img/menu-icon/16.svg" alt="" />
                 </div>
                 <div class="nav_title">
-                    <span>Pages</span>
+                    <span>Students Panel</span>
                 </div>
             </a>
             <ul>
