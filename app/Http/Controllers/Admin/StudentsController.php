@@ -135,6 +135,8 @@ class StudentsController extends Controller
 
 
             try{
+                
+                $collection = $request->all();
                 // image unlink from folder
                 $editImage = $this->student->edit($id);
                 $oldImage = $editImage->image;
@@ -144,7 +146,7 @@ class StudentsController extends Controller
                     }
                     //End image unlink from folder
 
-                    $collection = $request->all();
+                    // $collection = $request->all();
                     $file= $request->file('image');
                     $tempFilePath = "image/students/";
                     $hardPath = $tempFilePath.'students_'.$request->student_name.'_'.rand(0,999999).'-g.jpg';
@@ -156,14 +158,14 @@ class StudentsController extends Controller
 
 
 
-                $this->student->update($collection, $id);
+                $this->student->update($collection,$id);
                 toastr()->success("Successfully Updated done ");
                 return redirect()->route('student-datatable');
 
         }
         catch(Exception $error){
                 toastr()->error($error->getMessage());
-                return redirect()->route('student-edit');
+                return redirect()->back();
         }
 
 

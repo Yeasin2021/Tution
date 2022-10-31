@@ -27,8 +27,8 @@ Route::group(['middleware' => 'authuser'],function () {
     Route::post("/students-post", [StudentsController::class, "saveStudent"])->name("student-create");
     Route::get("/students-datatable", [StudentsController::class, "studentShow"])->name("student-datatable");
     Route::get("/students-edit/{id}", [StudentsController::class, "studentEdit"])->name("student-edit");
-    Route::post("/students-update-{id}", [StudentsController::class, "studentUpdate"])->name("student-update");
-    Route::any("/students-delete-{id}", [StudentsController::class, "studentDelete"])->name("student-delete");
+    Route::post("/students-update/{id}", [StudentsController::class, "studentUpdate"])->name("student-update");
+    Route::any("/students-delete/{id}", [StudentsController::class, "studentDelete"])->name("student-delete");
 
     Route::get('test',function(){
 
