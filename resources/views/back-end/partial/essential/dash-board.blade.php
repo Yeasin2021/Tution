@@ -207,7 +207,7 @@ header i{
 
 <div class="container-fluid g-0">
     <div class="row">
-        <div class="col-lg-12 p-2">
+        {{-- <div class="col-lg-12 p-2">
             <div class="header_iner d-flex justify-content-between align-items-center">
                 <div class="sidebar_icon d-lg-none">
                     <i class="ti-menu"></i>
@@ -332,11 +332,11 @@ header i{
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
 </div>
 
-<div class="main_content_iner overly_inner">
+<div class="main_content_iner overly_inner mt-3">
     <div class="container-fluid p-0">
         <div class="row">
             <div class="col-12">
