@@ -15,6 +15,8 @@ class CreateTutionRoutinesTable extends Migration
     {
         Schema::create('tution_routines', function (Blueprint $table) {
             $table->id();
+            $table->string('student_id')->nullable();
+            $table->string('routine')->nullable();
             $table->timestamps();
         });
     }

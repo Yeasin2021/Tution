@@ -79,6 +79,8 @@ Route::group(['middleware' => 'authuser'],function () {
 // });
 
 Route::get('/routine',[StudentsController::class,'tutionRoutineView'])->name('routineView');
+Route::get('/routine-form',[StudentsController::class,'tutionRoutineViewForm'])->name('routineForm');
+Route::post('/routine-form-post',[StudentsController::class,'tutionRoutineMakeer'])->name('routineMaker');
 
 
 });

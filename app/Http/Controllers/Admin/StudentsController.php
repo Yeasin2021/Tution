@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Essential\Interfaces\StudentInterface;
 use Illuminate\Support\Facades\Validator;
 use App\Models\StudentRoutin;
+use App\Models\TutionRoutine;
 use Exception;
 use File;
 use Illuminate\Support\Facades\Storage;
@@ -217,7 +218,7 @@ class StudentsController extends Controller
 
 
 
-//    from data store into a json file
+//    from data store into a json file without database
 
 
    public function jsonForm(){
@@ -230,8 +231,6 @@ class StudentsController extends Controller
 
     $collection = $request->only('firstname', 'lastname', 'country','subject');
     $data = array($collection);
-    // dd($data);
-
     if(filesize("store.json") == 0){
         $first_record = array($data);
         $data_to_save = $first_record;
@@ -336,6 +335,29 @@ public function studentPaymentPost(Request $request){
 
 public function tutionRoutineView(){
     return view('back-end.page.student.tutionRoutine');
+}
+
+public function tutionRoutineViewForm(){
+    return view('back-end.page.student.tutionRoutineForm');
+}
+
+public function tutionRoutineMakeer(Request $request){
+
+    $data =$request->except(['_token']);
+    // dd($_POST['subject']['day']);
+    // dd($_POST['subject']);
+    // dd($request->subject[]);
+    // dd($data);
+    $data1 = json_encode($data);
+    // dd($data1);
+    TutionRoutine::create(
+        [
+            // 'routine' => $data1
+            'routine' => $data
+        ]
+    );
+    toastr()->success("Routine Make Successfully");
+    return redirect()->back();
 }
 
 
