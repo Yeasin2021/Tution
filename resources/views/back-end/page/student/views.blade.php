@@ -20,6 +20,7 @@
                     <th class="text-center text-dark">Admission Date</th>
                     <th class="text-center text-dark">Image</th>
                     <th class="text-center text-dark">Message</th>
+                    {{-- <th class="text-center text-dark">Routine</th> --}}
                     <th class="text-center text-dark">Action</th>
                 </tr>
             </thead>
@@ -27,7 +28,7 @@
                 @foreach ($students as $key=>$student)
                     <tr class="text-center text-dark">
                         <td class="text-dark"><a href="{{ route('payment-form',$student->id) }}">{{ $student->student_id }}</a></td>
-                        <td class="text-dark">{{ $student->student_name }}</td>
+                        <td class="text-dark"><a href="{{ route('routineView',$student->student_id) }}">{{ $student->student_name }}</a></td>
                         <td class="text-dark">{{ $student->student_class }}</td>
                         <td class="text-dark">{{ $student->group }}</td>
                         <td class="text-dark">{{ $student->tution_fee }}</td>
@@ -35,6 +36,7 @@
                         <td class="text-dark">{{ $student->created_at }}</td>
                         <td height="100px" width="100px"><img src="{{ $student->image }}"></td>
                         <td><button class="btn btn-primary">Message</button></td>
+                        {{-- <td><a href="{{ route('routineView',$student->id) }}">View</a></td> --}}
                         <td>
                             <a href="{{ route('student-edit',$student->id )}}"><i class="fa fa-edit fa-2x"></i></a>
                             <a href="{{ route('student-delete',$student->id )}}"><i class="fa fa-trash fa-2x text-danger"></i></a>

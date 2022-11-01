@@ -341,9 +341,9 @@ public function tutionRoutineViewForm(){
     return view('back-end.page.student.tutionRoutineForm');
 }
 
-public function tutionRoutineMakeer(Request $request){
+public function tutionRoutineMakeer(Request $request,$id){
 
-    $student_id = Student::find($id);
+    $student_id = Student::find($student_id);
     $data =$request->except(['_token']);
     // dd($_POST['subject']['day']);
     // dd($_POST['subject']);
