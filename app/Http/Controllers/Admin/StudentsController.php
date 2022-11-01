@@ -332,7 +332,11 @@ public function studentPaymentPost(Request $request){
     return redirect()->back();
 }
 
+// Make a Class routine on tution
 
+public function tutionRoutineView(){
+    return view('back-end.page.student.tutionRoutine');
+}
 
 
 

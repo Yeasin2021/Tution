@@ -34,7 +34,6 @@ tr:nth-child(even) {
 @endphp
 <div class="container" style="margin: :auto;">
     <div class="row pt-3">
-
         <div class="clo-md-8">
             <table>
                 <tr style="text-align: center">

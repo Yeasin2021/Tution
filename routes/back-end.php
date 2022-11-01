@@ -72,9 +72,13 @@ Route::group(['middleware' => 'authuser'],function () {
 //    })->where('any', '.*');
 
 
-Route::get('/routine',function(){
-    return view('back-end.page.student.tutionRoutine');
-});
+
+
+// Route::get('/routine',function(){
+//     return view('back-end.page.student.tutionRoutine');
+// });
+
+Route::get('/routine',[StudentsController::class,'tutionRoutineView'])->name('routineView');
 
 
 });
