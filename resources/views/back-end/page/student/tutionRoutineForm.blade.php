@@ -92,7 +92,6 @@
                     <tbody>
 
                         @for($i = 0; $i < 3; $i++)
-
                                <tr class="text-center">
                                 @for($j = 0; $j < 3; $j++)
                                     <td class="text-dark"><input type="text" id="subject" name="input[][]" placeholder="Subject - {{ $i }}{{ $j }}"/></td>

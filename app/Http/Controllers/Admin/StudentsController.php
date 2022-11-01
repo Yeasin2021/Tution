@@ -352,8 +352,8 @@ public function tutionRoutineMakeer(Request $request){
     // dd($data1);
     TutionRoutine::create(
         [
-            // 'routine' => $data1
-            'routine' => $data
+            'routine' => $data1
+            // 'routine' => $data
         ]
     );
     toastr()->success("Routine Make Successfully");
