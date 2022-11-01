@@ -79,8 +79,11 @@
             </form> --}}
             <form action="{{ route('routineMaker') }}" method="POST" enctype="multipart/form-data">@csrf
                 @php
+
                     $input = array(array());
-                    $student_id = App\Models\Student::find(student_id);
+                    // $student_id = '';
+                    // $studentData = App\Models\Student::find($student_id);
+                    // dd($studentData);
                 @endphp
                 <table class="table table-striped text-center">
                     <input type="hidden" name="student_id" value="{{ $student_id }}">

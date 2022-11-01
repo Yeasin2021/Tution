@@ -8,6 +8,7 @@ use App\Essential\Interfaces\StudentInterface;
 use Illuminate\Support\Facades\Validator;
 use App\Models\StudentRoutin;
 use App\Models\TutionRoutine;
+use App\Models\Student;
 use Exception;
 use File;
 use Illuminate\Support\Facades\Storage;
@@ -337,8 +338,9 @@ public function tutionRoutineView(){
     return view('back-end.page.student.tutionRoutine');
 }
 
-public function tutionRoutineViewForm(){
-    return view('back-end.page.student.tutionRoutineForm');
+public function tutionRoutineViewForm($student_id){
+    $student_id = Student::find($student_id);
+    return view('back-end.page.student.tutionRoutineForm',compact('student_id',$student_id));
 }
 
 public function tutionRoutineMakeer(Request $request,$id){
