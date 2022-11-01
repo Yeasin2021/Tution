@@ -26,7 +26,7 @@
             <tbody>
                 @foreach ($students as $key=>$student)
                     <tr class="text-center text-dark">
-                        <td class="text-dark"><a href="{{ route('payment-form',$student->id) }}">{{ $student->roll_id }}</a></td>
+                        <td class="text-dark"><a href="{{ route('payment-form',$student->id) }}">{{ $student->student_id }}</a></td>
                         <td class="text-dark">{{ $student->student_name }}</td>
                         <td class="text-dark">{{ $student->student_class }}</td>
                         <td class="text-dark">{{ $student->group }}</td>

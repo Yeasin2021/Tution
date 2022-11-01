@@ -80,6 +80,7 @@
             <form action="{{ route('routineMaker') }}" method="POST" enctype="multipart/form-data">@csrf
                 @php
                     $input = array(array());
+                    // $all = App\Models\Student::get();
                 @endphp
                 <table class="table table-striped text-center">
                     <thead>

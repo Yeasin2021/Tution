@@ -343,6 +343,7 @@ public function tutionRoutineViewForm(){
 
 public function tutionRoutineMakeer(Request $request){
 
+    $student_id = Student::find($id);
     $data =$request->except(['_token']);
     // dd($_POST['subject']['day']);
     // dd($_POST['subject']);
