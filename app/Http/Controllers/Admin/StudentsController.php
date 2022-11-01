@@ -135,7 +135,7 @@ class StudentsController extends Controller
 
 
             try{
-                
+
                 $collection = $request->all();
                 // image unlink from folder
                 $editImage = $this->student->edit($id);
@@ -331,6 +331,10 @@ public function studentPaymentPost(Request $request){
     toastr()->success("Student Payment Successfully");
     return redirect()->back();
 }
+
+
+
+
 
 
 

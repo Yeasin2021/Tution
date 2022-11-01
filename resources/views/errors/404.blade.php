@@ -1,7 +1,13 @@
+
+
+
 @push('style')
+    {{-- <link rel="stylesheet" href="{{ asset('back-end') }}/css/metisMenu.css" /> --}}
+    {{-- <link rel="stylesheet" href="{{ asset('back-end') }}/css/style1.css" /> --}}
     <link rel="stylesheet" href="{{ asset('back-end/css/error404.css') }}">
 @endpush
 
+{{-- @extends('errors.bad') --}}
 @extends('back-end.index')
 
 @section('content')

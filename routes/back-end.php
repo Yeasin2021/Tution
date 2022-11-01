@@ -52,6 +52,30 @@ Route::group(['middleware' => 'authuser'],function () {
     Route::post('json-store',[StudentsController::class, "storeJsonData"])->name('json-store');
 
 
+    // Route::fallback(function(){
+    //     return view('errors.404');
+    //     // return dd('Baler Code ');
+    // });
+
+    // Route::view('/{path?}','errors.404');
+
+
+
+
+//     View::composer(['*'],function($view){
+//                 $error404 = 0;
+//                 $view->with('error404',$error404);
+//             });
+
+//    Route::any('/{any}', function(){
+//     return view('errors.404');
+//    })->where('any', '.*');
+
+
+Route::get('/routine',function(){
+    return view('back-end.page.student.tutionRoutine');
+});
+
 
 });
 

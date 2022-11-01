@@ -45,6 +45,7 @@
 		<link rel="stylesheet" href="{{ asset('back-end') }}/css/style1.css" />
 		<link rel="stylesheet" href="{{ asset('back-end') }}/css/colors/default.css" id="colorSkinCSS" />
 
+
         @stack('style')
 
         {{-- @toastr_css --}}
@@ -58,7 +59,13 @@
 
 
 		<section class="main_content dashboard_part large_header_bg">
-            @include('back-end.partial.essential.breadcum')
+
+            @php
+                $request = $_SERVER['REQUEST_URI'];
+            @endphp
+
+		     @include('back-end.partial.essential.breadcum')
+		 
             @yield('content')
 
 			@include('back-end.partial.essential.footer')
