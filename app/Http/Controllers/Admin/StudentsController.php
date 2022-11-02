@@ -334,6 +334,11 @@ public function studentPaymentPost(Request $request){
 
 // Make a Class routine on tution
 
+public function routineTable(){
+    $students = Student::all();
+    return view('back-end.page.student.routineTable',compact('students',$students));
+}
+
 public function tutionRoutineView(){
     return view('back-end.page.student.tutionRoutine');
 }
