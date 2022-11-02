@@ -338,25 +338,23 @@ public function tutionRoutineView(){
     return view('back-end.page.student.tutionRoutine');
 }
 
-public function tutionRoutineViewForm($student_id){
-    $student_id = Student::find($student_id);
-    return view('back-end.page.student.tutionRoutineForm',compact('student_id',$student_id));
+public function tutionRoutineViewForm(){
+    // $student_id = Student::find($student_id);
+    return view('back-end.page.student.tutionRoutineForm');
 }
 
-public function tutionRoutineMakeer(Request $request,$id){
+public function tutionRoutineMakeer(Request $request){
 
-    $student_id = Student::find($student_id);
-    $data =$request->except(['_token']);
-    // dd($_POST['subject']['day']);
-    // dd($_POST['subject']);
-    // dd($request->subject[]);
-    // dd($data);
+
+
+    $data =$request->except(['_token','student_id']);
     $data1 = json_encode($data);
-    // dd($data1);
+    // dd($data1,$student_id);
     TutionRoutine::create(
         [
+            'student_id' => $request->student_id,
             'routine' => $data1
-            // 'routine' => $data
+
         ]
     );
     toastr()->success("Routine Make Successfully");

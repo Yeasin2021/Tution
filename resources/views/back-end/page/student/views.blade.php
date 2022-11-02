@@ -13,7 +13,7 @@
                 <tr>
                     <th class="text-center text-dark">Id</th>
                     <th class="text-center text-dark">Name</th>
-                    <th class="text-center text-dark">Make</th>
+                    {{-- <th class="text-center text-dark">Make</th> --}}
                     <th class="text-center text-dark">Class</th>
                     <th class="text-center text-dark">Group</th>
                     <th class="text-center text-dark">Tution Fee</th>
@@ -30,7 +30,7 @@
                     <tr class="text-center text-dark">
                         <td class="text-dark"><a href="{{ route('payment-form',$student->id) }}">{{ $student->student_id }}</a></td>
                         <td class="text-dark"><a href="{{ route('routineView',$student->student_id) }}">{{ $student->student_name }}</a></td>
-                        <td class="text-dark"><a href="{{ route('routineForm',$student->student_id) }}">RM</a></td>
+                        {{-- <td class="text-dark"><a href="{{ route('routineForm',$student->student_id) }}">RM</a></td> --}}
                         <td class="text-dark">{{ $student->student_class }}</td>
                         <td class="text-dark">{{ $student->group }}</td>
                         <td class="text-dark">{{ $student->tution_fee }}</td>

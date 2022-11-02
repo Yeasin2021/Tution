@@ -66,6 +66,7 @@
             <ul>
                 <li><a href="{{ route('student-form') }}">Student Admission</a></li>
                 <li><a href="{{ route('student-datatable') }}">Student Index</a></li>
+                <li><a href="{{ route('routineForm') }}">Routine Maker</a></li>
                 <li><a href="error_400.html">Error 404</a></li>
                 <li><a href="error_500.html">Error 500</a></li>
                 <li><a href="forgot_pass.html">Forgot Password</a></li>

@@ -80,13 +80,13 @@
             <form action="{{ route('routineMaker') }}" method="POST" enctype="multipart/form-data">@csrf
                 @php
 
-                    $input = array(array());
-                    // $student_id = '';
-                    // $studentData = App\Models\Student::find($student_id);
+                    // $input = array(array());
+                    // // $student_id = '';
+                    // $studentData = App\Models\Student::find(4958);
                     // dd($studentData);
                 @endphp
                 <table class="table table-striped text-center">
-                    <input type="hidden" name="student_id" value="{{ $student_id }}">
+                    <input type="text" name="student_id" placeholder="input Student's Id ">
                     <thead>
                         <tr class="text-center">
                             <th>Saturday</th>
