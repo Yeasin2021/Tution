@@ -372,7 +372,8 @@ public function tutionRoutineMakeer(Request $request){
 
 public function studentPayment(){
 
-    return view('back-end.page.student.student_payment');
+    $students = Student::all();
+    return view('back-end.page.student.student_payment',compact('students',$students));
 
 }
 

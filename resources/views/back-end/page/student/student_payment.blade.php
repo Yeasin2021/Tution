@@ -3,7 +3,11 @@
 <div class="container">
 <form action="{{ route('payment-post') }}" method="POST" enctype="multipart/form-data">@csrf
 <div class="row">
+@php
+    foreach ($students as $student)
+        dd($student->student_id)
 
+@endphp
       <div class="col-12 pt-2" style="margin-left: 20px">
         <div class="card">
             <div class="card-body ml-2">

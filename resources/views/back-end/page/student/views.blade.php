@@ -28,7 +28,8 @@
             <tbody>
                 @foreach ($students as $key=>$student)
                     <tr class="text-center text-dark">
-                        <td class="text-dark"><a href="{{ route('payment-form',$student->id) }}">{{ $student->student_id }}</a></td>
+                        {{-- <td class="text-dark"><a href="{{ route('payment-form',$student->id) }}">{{ $student->student_id }}</a></td> --}}
+                        <td class="text-dark"><a href="{{ route('student.payment.form',$student->student_id) }}">{{ $student->student_id }}</a></td>
                         <td class="text-dark"><a href="{{ route('routineView',$student->student_id) }}">{{ $student->student_name }}</a></td>
                         {{-- <td class="text-dark"><a href="{{ route('routineForm',$student->student_id) }}">RM</a></td> --}}
                         <td class="text-dark">{{ $student->student_class }}</td>
