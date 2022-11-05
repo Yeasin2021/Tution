@@ -372,7 +372,7 @@ public function tutionRoutineMakeer(Request $request){
 
 public function studentPayment(){
 
-    return "OK";
+    return view('back-end.page.student.student_payment');
 
 }
 
