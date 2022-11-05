@@ -271,6 +271,7 @@ public function studentPaymentPost(Request $request){
     $id = '';
     // $collection = $request->only('student_id','student_name','tution_fee','month');
     $collection = $request->except(['_token']);
+    // dd($collection);
     $month = json_encode($request->month);
 
     // dd($month);

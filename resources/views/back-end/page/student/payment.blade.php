@@ -10,7 +10,6 @@
         <div class="card">
             <div class="card-body ml-2">
               <h5 class="card-title">Add a new Student </h5>
-
                 <div class="form-group">
                   <label for="formGroupExampleInput">Student's Roll</label>
                   <input type="text" class="form-control" id="formGroupExampleInput1" name="roll_id" value="{{ $payment->roll_id }}" readonly="true">
@@ -30,10 +29,10 @@
                     <input type="text" class="form-control" id="formGroupExampleInput1"  name="tution_fee" value="{{ $payment->tution_fee }}" readonly="true">
                   </div>
 
-                <div class="form-group">
+                {{-- <div class="form-group">
                     <label for="formGroupExampleInput" class="mt-3">Test</label>
                     <input type="text" class="form-control" id="formGroupExampleInput1"  name="test" >
-                  </div>
+                  </div> --}}
 
 
                 <div class="form-group">
