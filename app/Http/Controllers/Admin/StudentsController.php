@@ -368,6 +368,16 @@ public function tutionRoutineMakeer(Request $request){
 
 
 
+// student payment table
+
+public function studentPayment(){
+
+    return "OK";
+
+}
+
+
+
 
 
 }
