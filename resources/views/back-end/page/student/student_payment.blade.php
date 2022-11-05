@@ -1,7 +1,7 @@
 @extends('back-end.index')
 @section('content')
 <div class="container">
-<form action="{{ route('student-create') }}" method="POST" enctype="multipart/form-data">@csrf
+<form action="{{ route('payment-post') }}" method="POST" enctype="multipart/form-data">@csrf
 <div class="row">
 
       <div class="col-12 pt-2" style="margin-left: 20px">
@@ -14,7 +14,7 @@
               <div class="form-group">
                 <label for="formGroupExampleInput" class="mt-3">Month:</label>
                 <tr class="text-center">
-                    <td class="m-3" style="margin: 0 0 0 17px"><input  type="checkbox"  name="month[]" value="January">January</td>
+                    <td class="m-3"><input  type="checkbox"  name="month[]" value="January">January</td>
                     <td  class="m-3"><input type="checkbox"  name="month[]" value="February">February</td>
                     <td  class="m-3"><input type="checkbox"  name="month[]" value="March">March</td>
                     <td class="ml-3"><input type="checkbox"  name="month[]" value="April">April</td>
