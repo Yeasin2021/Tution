@@ -40,6 +40,7 @@ class Testy extends Command
         $this->info("The command is Successfully");
         $this->warn("This is warning Message");
         $this->error("This is error Message");
+        $this->line("This is line Message");
 
     }
 }
