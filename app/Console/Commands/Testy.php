@@ -38,5 +38,8 @@ class Testy extends Command
     public function handle()
     {
         $this->info("The command is Successfully");
+        $this->warn("This is warning Message");
+        $this->error("This is error Message");
+
     }
 }
