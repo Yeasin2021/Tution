@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\login\LoginController;
 
 require "back-end.php";
@@ -51,4 +52,6 @@ Route::post('reset-password',[LoginController::class,'resetPassword'])->name('pa
 
 Route::get('update-reset-password-from',[LoginController::class,'password'])->name('update-password.reset.form');
 Route::post('update-reset-password-post',[LoginController::class,'updatePassword'])->name('user.update.password');
+
+
 

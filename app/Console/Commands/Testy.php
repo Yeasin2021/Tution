@@ -3,6 +3,8 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use Exception;
+use Illuminate\Support\Facades\Validator;
 
 class Testy extends Command
 {
@@ -41,6 +43,8 @@ class Testy extends Command
         $this->warn("This is warning Message");
         $this->error("This is error Message");
         $this->line("This is line Message");
+
+        toastr()->success('App is running !!!');
 
     }
 }

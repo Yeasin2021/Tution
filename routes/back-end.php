@@ -87,6 +87,9 @@ Route::post('/routine-form-post',[StudentsController::class,'tutionRoutineMakeer
 
 Route::get('student/payment/form', [StudentsController::class, 'studentPayment'])->name('student.payment.form');
 
+// Route::get('/toast',function(){
+//     Artisan::call('create:message');
+// });
 
 });
 
