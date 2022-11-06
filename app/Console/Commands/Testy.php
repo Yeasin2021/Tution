@@ -11,14 +11,14 @@ class Testy extends Command
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'create:message';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'message show';
 
     /**
      * Create a new command instance.
@@ -37,6 +37,6 @@ class Testy extends Command
      */
     public function handle()
     {
-        return 0;
+        $this->info("The command is Successfully");
     }
 }
