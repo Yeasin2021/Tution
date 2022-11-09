@@ -12,6 +12,11 @@ class CountSallary{
         return $sallry->sum('tution_fee');
     }
 
+    public function studentSallary2(){
+        $sallry = Student::all();
+        dd($sallry->sum('tution_fee'));
+    }
+
 
 }
 
