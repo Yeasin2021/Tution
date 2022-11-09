@@ -95,9 +95,9 @@ Route::get('student/payment/form', [StudentsController::class, 'studentPayment']
 
 
 // Facades Route declare
-Count::studentSallary2('facades',function(){
-    Count::studentSallary2();
-});
+// Count::studentSallary2('facades',function(){
+//     Count::studentSallary2();
+// });
 
 
 
