@@ -54,8 +54,14 @@
                     <th class="text-center">Name</th>
                     <th class="text-center">Class</th>
                     <th class="text-center">Group</th>
-                    <?php $sum = \App\Models\Student::sum('tution_fee');?>
-                    <th class="text-center">Tution Fee {{ $sum }} </th>
+                    {{-- @php
+                        $countOfTaka = \App\Facades\Count;
+                    @endphp --}}
+                    {{-- @php
+                        $sum = \App\Models\Student::sum('tution_fee');
+                    @endphp --}}
+                    {{-- <th class="text-center">Tution Fee {{ $sum }} </th> --}}
+                    <th class="text-center">Tution Fee {{ $taka }} </th>
                     <th class="text-center">Tution Day</th>
                     <th class="text-center">Admission Date</th>
                     <th class="text-center">Image</th>

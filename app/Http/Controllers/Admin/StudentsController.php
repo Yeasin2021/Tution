@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Validator;
 use App\Models\StudentRoutin;
 use App\Models\TutionRoutine;
 use App\Models\Student;
+use App\Facades\Count;
 use Exception;
 use File;
 use Illuminate\Support\Facades\Storage;
@@ -30,7 +31,8 @@ class StudentsController extends Controller
 
     public function studentShow(){
         $students = $this->student->read();
-        return view('back-end.page.student.views',compact('students', $students));
+        $taka = Count::studentSallary();
+        return view('back-end.page.student.views',compact('students','taka', $students,$taka));
     }
 
 
