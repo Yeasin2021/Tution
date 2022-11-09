@@ -54,9 +54,7 @@
                     <th class="text-center">Name</th>
                     <th class="text-center">Class</th>
                     <th class="text-center">Group</th>
-                    {{-- @php
-                        $countOfTaka = \App\Facades\Count;
-                    @endphp --}}
+                  
                     {{-- @php
                         $sum = \App\Models\Student::sum('tution_fee');
                     @endphp --}}
