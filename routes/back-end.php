@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\StudentsController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\Login\LoginController;
+use App\Facades\Count;
 
 
 
@@ -90,6 +91,13 @@ Route::get('student/payment/form', [StudentsController::class, 'studentPayment']
 // Route::get('/toast',function(){
 //     Artisan::call('create:message');
 // });
+
+
+
+// Facades Route declare
+Route::get('facades',function(){
+    Count::studentSallary();
+});
 
 });
 
