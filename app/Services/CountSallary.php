@@ -2,7 +2,7 @@
 namespace App\Services;
 
 
-class TotalTaka{
+class CountSallary{
 
     public function taka(){
         echo "Hello I am Working Bro !!!";
