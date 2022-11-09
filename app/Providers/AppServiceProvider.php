@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use App\Essential\Interfaces\StudentInterface;
 use App\Essential\Repositories\StudentRepository;
+use App\Services\CountSallary;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -17,6 +18,7 @@ class AppServiceProvider extends ServiceProvider
     {
         //Student interface & repository registered
         $this->app->bind(StudentInterface::class,StudentRepository::class);
+        $this->app->bind('Count',CountSallary::class);
     }
 
     /**
