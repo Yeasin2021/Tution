@@ -7,7 +7,7 @@
 <div class="container">
     <div class="row pt-3">
       <div class="col-sm">
-        <div class="wrapper">
+        <div class="wrapper position">
             <img src="./files/clock.svg" alt="clock">
             <h1>00:00:00 PM</h1>
             <div class="content">
