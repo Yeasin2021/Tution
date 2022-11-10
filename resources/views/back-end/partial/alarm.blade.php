@@ -8,7 +8,7 @@
     <div class="row pt-3">
       <div class="col-sm">
         <div class="wrapper position">
-            <img src="./files/clock.svg" alt="clock">
+            <img src="{{ asset('back-end/alarm_files/clock.svg') }}" alt="clock">
             <h1>00:00:00 PM</h1>
             <div class="content">
               <div class="column">
@@ -46,7 +46,7 @@ setAlarmBtn = document.querySelector("button");
 
 let alarmTime, isAlarmSet,
 //ringtone = new Audio("./files/ringtone.mp3");
-ringtone = new Audio("./files/azan1.mp3");
+ringtone = new Audio("back-end/alarm_files/ringtone.mp3");
 
 for (let i = 12; i > 0; i--) {
     i = i < 10 ? `0${i}` : i;
