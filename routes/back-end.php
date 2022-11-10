@@ -99,6 +99,12 @@ Route::get('student/payment/form', [StudentsController::class, 'studentPayment']
 //     Count::studentSallary2();
 // });
 
+Route::get('/alarm',function(){
+
+        return view('back-end.partial.alarm');
+
+});
+
 
 
 });
