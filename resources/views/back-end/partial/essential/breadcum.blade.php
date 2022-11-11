@@ -122,3 +122,28 @@
                     </div>
                 </div>
             </div>
+            {{-- <button onclick="ok()" id="my_id" hidden>Set Alarm</button> --}}
+
+ {{-- @push('js')
+
+<script>
+    var h = 12;
+    var m = 50;
+    var s = 00;
+    var ampm = 'PM';
+    const AjanTime = `${h}:${m}:${s} ${ampm}`;
+    const Click = document.getElementById('my_id');
+    setTimeout(() => {
+      Click.click();
+    }, 5000);
+
+
+
+function ok(){
+    ringtone = new Audio("back-end/alarm_files/azan1.mp3");
+    ringtone.play();
+}
+
+</script>
+
+@endpush --}}

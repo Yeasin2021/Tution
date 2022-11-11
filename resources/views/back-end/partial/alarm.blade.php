@@ -27,7 +27,8 @@
                 </select>
               </div>
             </div>
-            <button onclick="ok()" id="my_id">Set Alarm</button>
+            <button onclick="azan()" id="my_id">Set Alarm</button>
+            {{-- <button onclick="azan()" id="my_id">Set Alarm</button> --}}
             {{-- onclick="ok()" --}}
           </div>
           {{-- <audio src="{{ asset('back-end/alarm_files/ajan1.mp3') }}" loop="loop" id="my_audio"></audio> --}}
@@ -41,15 +42,57 @@
 @push('js')
 
 <script>
-    // const alarmTime = 3690000;
+
+
     const Click = document.getElementById('my_id');
+    // setTimeout(() => {
+    //     Click.click();
+    // }, 2000);
+
+    function azan(){
+    ringtone = new Audio("back-end/alarm_files/azan1.mp3");
+    ringtone.play();
+   }
+
+   let interval;
+   interval = setInterval(() => {
+    Click.click();
+   }, 5000);
+
+   setTimeout(() => {
+        clearInterval(interval);
+    }, 6000);
+
+
+
+
+
     // setInterval(() => {
     //     Click.click();
     // }, 5000);
 
-    setTimeout(() => {
-      Click.click();
-    }, 7000);
+    // var h = 9;
+    // var m = 21;
+    // var s = 00;
+    // var ampm = "PM";
+    // var azanTime = `${h}:${m} ${ampm}`;
+
+    var currentTime = new Date().toLocaleTimeString();
+    // var ringtone = new Audio("back-end/alarm_files/azan1.mp3");
+
+
+    // function azan(){
+    //     if(azanTime == currentTime)
+    //     {
+    //         Click.click();
+    //         ringtone.play();
+    //         console.log"Azan Time is ON : "(azanTime);
+    //     }
+    // }
+    // setTimeout(azan, 5000);
+    // setTimeout(() => {
+    //   Click.click();
+    // }, 5000);
 
     // var setInterval_ID = setInterval(ok, 5000);
     // function my_alert_func()
@@ -63,9 +106,7 @@
     //     clearInterval(setInterval_ID);
     // }
 
-    // setTimeout(() => {
-    //     Click.click();
-    // }, 2000);
+
     // const alarmTime = '10:58:00 PM';
     // const currentTime = new Date().toLocaleTimeString();
     // ringtone = new Audio("back-end/alarm_files/azan1.mp3");
@@ -90,12 +131,7 @@
 //     }
 //     console.log(currentTime + ' ' + alarmTime);
 // },1000);
-function ok(){
-    ringtone = new Audio("back-end/alarm_files/azan1.mp3");
-    ringtone.play();
-//    console.log('ok');
 
-}
 // const currentTime = document.querySelector("h1"),
 // content = document.querySelector(".content"),
 // selectMenu = document.querySelectorAll("select"),
