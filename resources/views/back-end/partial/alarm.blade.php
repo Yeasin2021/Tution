@@ -43,12 +43,12 @@
 <script>
     // const alarmTime = 3690000;
     const Click = document.getElementById('my_id');
-    setInterval(() => {
-        Click.click();
-    }, 5000);
+    // setInterval(() => {
+    //     Click.click();
+    // }, 5000);
 
     setTimeout(() => {
-        clearInterval();
+      Click.click();
     }, 7000);
 
     // var setInterval_ID = setInterval(ok, 5000);

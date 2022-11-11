@@ -65,7 +65,7 @@
             @endphp
 
 		     @include('back-end.partial.essential.breadcum')
-		 
+
             @yield('content')
 
 			@include('back-end.partial.essential.footer')
@@ -132,6 +132,7 @@
 					</ul>
 				</div>
 			</div>
+
 			<div class="CHAT_POPUP_BODY">
 				<p class="mesaged_send_date">
 					Sunday, 12 January
@@ -185,6 +186,7 @@
 		<div id="back-top" style="display: none;">
 			<a title="Go to Top" href="#">
 				<i class="ti-angle-up"></i>
+
 			</a>
 		</div>
 
