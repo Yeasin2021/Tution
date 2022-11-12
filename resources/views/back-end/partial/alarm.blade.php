@@ -9,7 +9,7 @@
       <div class="col-sm">
         <div class="wrapper position">
             <img src="{{ asset('back-end/alarm_files/clock.svg') }}" alt="clock">
-            <h1>00:00:00 PM</h1>
+            <h1 id="clock"></h1>
             <div class="content">
               <div class="column">
                 <select>
@@ -45,19 +45,44 @@
 
 
     const Click = document.getElementById('my_id');
+    const clock = document.getElementById('clock');
     // setTimeout(() => {
     //     Click.click();
     // }, 2000);
 
     function azan(){
     ringtone = new Audio("back-end/alarm_files/azan1.mp3");
+
     ringtone.play();
+
    }
 
    let interval;
+
+   let currentTime = new Date().toLocaleTimeString();
+   const alarm = '18:46:00';
+   const alarmTime = new Date();
+   setInterval(() => {
+     const time = new Date();
+     const hour = time.getHours();
+     const minutes = time.getMinutes();
+     const second = time.getSeconds();
+     clock.innerText = `${hour}:${minutes}:${second}`;
+    //  const currentTime = `${hour}:${minutes}:${second}`
+    //  console.log(currentTime)
+    // if(alarmTime === currentTime){
+    //     Click.click();
+    // }
+   }, 1000);
+
+
+
    interval = setInterval(() => {
     Click.click();
-   }, 5000);
+    // if(alarmTime === currentTime){
+    //     Click.click();
+    // }
+   },5000);
 
    setTimeout(() => {
         clearInterval(interval);
@@ -77,7 +102,7 @@
     // var ampm = "PM";
     // var azanTime = `${h}:${m} ${ampm}`;
 
-    var currentTime = new Date().toLocaleTimeString();
+    // var currentTime = new Date().toLocaleTimeString();
     // var ringtone = new Audio("back-end/alarm_files/azan1.mp3");
 
 
