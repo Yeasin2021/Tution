@@ -54,25 +54,24 @@
     ringtone = new Audio("back-end/alarm_files/azan1.mp3");
 
     ringtone.play();
+    console.log("Clicked");
 
    }
 
    let interval;
 
    let currentTime = new Date().toLocaleTimeString();
-   const alarm = '18:46:00';
-   const alarmTime = new Date();
+   var times = '15:34';
+   const alarm = new Date(times);
+   const alarmTime = new Date().getTime();
    setInterval(() => {
      const time = new Date();
      const hour = time.getHours();
      const minutes = time.getMinutes();
      const second = time.getSeconds();
      clock.innerText = `${hour}:${minutes}:${second}`;
-    //  const currentTime = `${hour}:${minutes}:${second}`
-    //  console.log(currentTime)
-    // if(alarmTime === currentTime){
-    //     Click.click();
-    // }
+     const currentTime = `${hour}:${minutes}:${second}`
+     console.log(alarmTime)
    }, 1000);
 
 
@@ -82,12 +81,11 @@
     // if(alarmTime === currentTime){
     //     Click.click();
     // }
-   },5000);
+   },1000*60);
 
    setTimeout(() => {
         clearInterval(interval);
-    }, 6000);
-
+    }, 1000*60*3.5-1000*60*2);
 
 
 
